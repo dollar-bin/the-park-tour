@@ -1,0 +1,156 @@
+/* ---------- Fonts ---------- */
+
+@font-face {
+    font-family: "Poppin";
+    src: url("assets/fonts/Poppin-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Lefty";
+    src: url("assets/fonts/Lefty.otf") format("opentype");
+}
+
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background-image:url("assets/images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    position:relative;
+
+    color:white;
+
+    overflow:hidden;
+}
+
+/* ---------- Background Overlay ---------- */
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(3px);
+}
+
+/* ---------- Main ---------- */
+
+main{
+
+    position:relative;
+    z-index:2;
+
+    width:min(420px,90%);
+
+    text-align:center;
+}
+
+/* ---------- Title ---------- */
+
+h1{
+
+    font-family:"Poppin", sans-serif;
+
+    font-size:3.4rem;
+
+    font-weight:normal;
+
+    margin-bottom:50px;
+
+    letter-spacing:1px;
+}
+
+/* ---------- Buttons ---------- */
+
+.buttons{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:16px;
+
+    width:100%;
+}
+
+.button{
+
+    width:100%;
+
+    display:block;
+
+    font-family:"Lefty", sans-serif;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#29412B;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:6px;
+
+    font-size:1.3rem;
+
+    transition:background .2s ease,
+               transform .2s ease;
+}
+
+.button:hover{
+
+    background:#35553A;
+
+    transform:translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    position:absolute;
+
+    bottom:28px;
+
+    z-index:2;
+
+    font-family:"Poppin", sans-serif;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:2.7rem;
+    }
+
+    .button{
+        font-size:1.15rem;
+        padding:16px;
+    }
+
+}
