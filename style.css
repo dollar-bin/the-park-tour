@@ -10,42 +10,70 @@
     src: url("assets/fonts/Lefty.otf") format("opentype");
 }
 
+
 /* ---------- Reset ---------- */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    height: 100%;
-    min-height: -webkit-fill-available;
-}
-
-html,
-body {
-    margin: 0;
-    padding:0;
     width: 100%;
     height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+
+    overflow: hidden;
 }
 
 body {
-    min-height: 100vh;
-    min-height: 100dvh;
+    width: 100%;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    overflow-x: hidden;
+    overflow: hidden;
 
     position: relative;
 
     color: white;
 }
+
+
+/* ---------- Background Image ---------- */
+
+.bg-image {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    object-fit: cover;
+    object-position: center center;
+
+    z-index: -2;
+
+    pointer-events: none;
+    user-select: none;
+}
+
 
 /* ---------- Background Overlay ---------- */
 
@@ -62,6 +90,7 @@ body {
     z-index: -1;
 }
 
+
 /* ---------- Main ---------- */
 
 main {
@@ -75,6 +104,7 @@ main {
 
     text-align: center;
 }
+
 
 /* ---------- Title ---------- */
 
@@ -90,9 +120,11 @@ h1 {
     letter-spacing: 1px;
 }
 
+
 /* ---------- Buttons ---------- */
 
 .buttons {
+
     display: flex;
 
     flex-direction: column;
@@ -102,18 +134,25 @@ h1 {
     width: 100%;
 }
 
+
 .button {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     width: 100%;
 
     font-family: "Lefty", sans-serif;
+
     font-size: 1.3rem;
 
     text-decoration: none;
+
     text-align: center;
+
     color: white;
 
     background: #29412B;
@@ -121,61 +160,50 @@ h1 {
     padding: 18px 20px;
 
     border: none;
+
     border-radius: 6px;
 
     transition: background .2s ease, transform .2s ease;
 }
 
-.button:hover{
 
-    background:#35553A;
+.button:hover {
 
-    transform:translateY(-2px);
+    background: #35553A;
+
+    transform: translateY(-2px);
 }
+
 
 /* ---------- Footer ---------- */
 
-footer{
+footer {
 
-    position:absolute;
+    position: absolute;
 
-    bottom:28px;
+    bottom: 28px;
 
-    z-index:2;
+    z-index: 2;
 
-    font-family:"Poppin", sans-serif;
+    font-family: "Poppin", sans-serif;
 
-    font-size:.9rem;
+    font-size: .9rem;
 
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
+
 
 /* ---------- Mobile ---------- */
 
 @media(max-width:600px){
 
-    h1{
-        font-size:2.7rem;
+    h1 {
+        font-size: 2.7rem;
     }
 
-    .button{
-        font-size:1.15rem;
-        padding:16px;
+    .button {
+        font-size: 1.15rem;
+        padding: 16px;
     }
 
-}
-
-.bg-image {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100dvh;
-
-    object-fit: cover;
-    object-position: center;
-
-    z-index: -2;
 }
