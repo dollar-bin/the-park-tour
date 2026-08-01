@@ -32,7 +32,7 @@ body {
 }
 
 
-/* ---------- Body Background ---------- */
+/* ---------- Full Screen Background ---------- */
 
 body {
 
@@ -58,33 +58,33 @@ body {
 
     background-image:url("assets/images/background.jpg");
 
-    background-size:cover;
+    background-repeat:no-repeat;
 
     background-position:center center;
 
-    background-repeat:no-repeat;
+    background-size:100% 100%;
 
 }
 
 
+
 /* ---------- Overlay ---------- */
 
+/*
 .overlay {
 
     position:fixed;
 
     inset:0;
 
-
     background:rgba(0,0,0,.35);
 
-
     backdrop-filter:blur(2px);
-
 
     z-index:1;
 
 }
+*/
 
 
 /* ---------- Main ---------- */
@@ -99,6 +99,9 @@ main {
     width:min(420px,90%);
 
 
+    margin:0 auto;
+
+
     text-align:center;
 
 }
@@ -110,7 +113,9 @@ h1 {
 
     font-family:"Poppin", sans-serif;
 
+
     font-size:3.4rem;
+
 
     font-weight:normal;
 
@@ -123,15 +128,19 @@ h1 {
 }
 
 
+
 /* ---------- Buttons ---------- */
 
 .buttons {
 
     display:flex;
 
+
     flex-direction:column;
 
+
     gap:16px;
+
 
     width:100%;
 
@@ -142,7 +151,9 @@ h1 {
 
     display:flex;
 
+
     justify-content:center;
+
 
     align-items:center;
 
@@ -152,10 +163,12 @@ h1 {
 
     font-family:"Lefty", sans-serif;
 
+
     font-size:1.3rem;
 
 
     text-decoration:none;
+
 
     text-align:center;
 
@@ -171,9 +184,11 @@ h1 {
 
     border:none;
 
+
     border-radius:6px;
 
 }
+
 
 
 /* ---------- Footer ---------- */
@@ -198,6 +213,7 @@ footer {
     letter-spacing:1px;
 
 }
+
 
 
 /* ---------- Mobile ---------- */
