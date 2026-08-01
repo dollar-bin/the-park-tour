@@ -63,41 +63,42 @@ body {
 
 /* ---------- Main ---------- */
 
-main{
+main {
+    position: relative;
 
-    position:relative;
-    z-index:2;
+    z-index: 2;
 
-    width:min(420px,90%);
+    width: min(420px, 90%);
 
-    text-align:center;
+    margin: 0 auto;
+
+    text-align: center;
 }
 
 /* ---------- Title ---------- */
 
-h1{
+h1 {
+    font-family: "Poppin", sans-serif;
 
-    font-family:"Poppin", sans-serif;
+    font-size: 3.4rem;
 
-    font-size:3.4rem;
+    font-weight: normal;
 
-    font-weight:normal;
+    margin-bottom: 50px;
 
-    margin-bottom:50px;
-
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
 
 /* ---------- Buttons ---------- */
 
-.buttons{
+.buttons {
+    display: flex;
 
-    display:flex;
-    flex-direction:column;
+    flex-direction: column;
 
-    gap:16px;
+    gap: 16px;
 
-    width:100%;
+    width: 100%;
 }
 
 .button {
