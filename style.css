@@ -1,3 +1,5 @@
+/* ---------- Fonts ---------- */
+
 @font-face {
     font-family: "Poppin";
     src: url("assets/fonts/Poppin-Regular.otf") format("opentype");
@@ -9,6 +11,8 @@
 }
 
 
+/* ---------- Reset ---------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,53 +20,61 @@
 }
 
 
-html,
-body {
+html {
 
     width: 100%;
     height: 100%;
 
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
 
-    background: #000;
+    background: transparent;
 
 }
 
 
 body {
 
-    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: transparent;
 
     color: white;
 
 }
 
 
-/* ---------- TRUE FULL BLEED BACKGROUND ---------- */
+/* ---------- Full Bleed Background ---------- */
 
-.background {
+.bg-image {
 
-    position: absolute;
+    position: fixed;
 
-    top: 50%;
-    left: 50%;
+    top: -50px;
 
-
-    width: 200vw;
-
-    height: 200vh;
+    left: -50px;
 
 
-    transform: translate(-50%, -50%);
+    width: calc(100vw + 100px);
+
+    height: calc(100dvh + 100px);
 
 
     background-image: url("assets/images/background.jpg");
 
-    background-repeat: no-repeat;
-
-    background-position: center;
 
     background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
 
 
     z-index: 0;
@@ -70,12 +82,11 @@ body {
 }
 
 
-
 /* ---------- Overlay ---------- */
 
 .overlay {
 
-    position: absolute;
+    position: fixed;
 
     inset: 0;
 
@@ -83,13 +94,15 @@ body {
     background: rgba(0,0,0,.35);
 
 
+    backdrop-filter: blur(2px);
+
+
     z-index: 1;
 
 }
 
 
-
-/* ---------- Content ---------- */
+/* ---------- Main ---------- */
 
 main {
 
@@ -104,30 +117,38 @@ main {
     margin: 0 auto;
 
 
+    text-align: center;
+
+
     top: 50%;
 
     transform: translateY(-50%);
 
-
-    text-align: center;
-
 }
 
 
+/* ---------- Title ---------- */
 
 h1 {
 
     font-family: "Poppin", sans-serif;
 
+
     font-size: 3.4rem;
+
 
     font-weight: normal;
 
+
     margin-bottom: 50px;
+
+
+    letter-spacing: 1px;
 
 }
 
 
+/* ---------- Buttons ---------- */
 
 .buttons {
 
@@ -135,10 +156,13 @@ h1 {
 
     flex-direction: column;
 
+
     gap: 16px;
 
-}
 
+    width: 100%;
+
+}
 
 
 .button {
@@ -155,12 +179,14 @@ h1 {
 
     font-family: "Lefty", sans-serif;
 
+
     font-size: 1.3rem;
 
 
-    color: white;
-
     text-decoration: none;
+
+
+    color: white;
 
 
     background: #29412B;
@@ -174,6 +200,7 @@ h1 {
 }
 
 
+/* ---------- Footer ---------- */
 
 footer {
 
@@ -181,6 +208,7 @@ footer {
 
 
     bottom: 24px;
+
 
     left: 0;
 
@@ -196,11 +224,16 @@ footer {
 
     font-family: "Poppin", sans-serif;
 
+
     font-size: .9rem;
+
+
+    letter-spacing: 1px;
 
 }
 
 
+/* ---------- Mobile ---------- */
 
 @media(max-width:600px){
 
