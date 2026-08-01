@@ -10,6 +10,7 @@
     src: url("assets/fonts/Lefty.otf") format("opentype");
 }
 
+
 /* ---------- Reset ---------- */
 
 *{
@@ -18,164 +19,265 @@
     box-sizing:border-box;
 }
 
+
 html {
-    height: 100%;
-    min-height: -webkit-fill-available;
+
+    height:100%;
+
 }
+
 
 html,
 body {
-    margin: 0;
+
+    margin:0;
+
     padding:0;
-    width: 100%;
-    height: 100%;
+
+    width:100%;
+
+    height:100%;
+
 }
+
 
 body {
-    min-height: 100vh;
-    min-height: 100dvh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    min-height:100vh;
 
-    overflow-x: hidden;
+    min-height:100dvh;
 
-    position: relative;
 
-    color: white;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+
+    overflow:hidden;
+
+
+    position:relative;
+
+
+    color:white;
+
 }
+
+
+/* ---------- Background Image ---------- */
+
+.bg-image {
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+
+    width:100vw;
+
+    height:100vh;
+
+
+    background-image:url("assets/images/background.jpg");
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-repeat:no-repeat;
+
+
+    z-index:-2;
+
+}
+
 
 /* ---------- Background Overlay ---------- */
 
 .overlay {
 
-    position: fixed;
+    position:fixed;
 
-    inset: 0;
+    inset:0;
 
-    background: rgba(0,0,0,.35);
 
-    backdrop-filter: blur(2px);
+    background:rgba(0,0,0,.35);
 
-    z-index: -1;
+
+    backdrop-filter:blur(2px);
+
+
+    z-index:-1;
+
 }
+
 
 /* ---------- Main ---------- */
 
 main {
-    position: relative;
 
-    z-index: 2;
+    position:relative;
 
-    width: min(420px, 90%);
 
-    margin: 0 auto;
+    z-index:2;
 
-    text-align: center;
+
+    width:min(420px,90%);
+
+
+    margin:0 auto;
+
+
+    text-align:center;
+
 }
+
 
 /* ---------- Title ---------- */
 
 h1 {
-    font-family: "Poppin", sans-serif;
 
-    font-size: 3.4rem;
+    font-family:"Poppin", sans-serif;
 
-    font-weight: normal;
 
-    margin-bottom: 50px;
+    font-size:3.4rem;
 
-    letter-spacing: 1px;
+
+    font-weight:normal;
+
+
+    margin-bottom:50px;
+
+
+    letter-spacing:1px;
+
 }
+
 
 /* ---------- Buttons ---------- */
 
 .buttons {
-    display: flex;
 
-    flex-direction: column;
+    display:flex;
 
-    gap: 16px;
 
-    width: 100%;
+    flex-direction:column;
+
+
+    gap:16px;
+
+
+    width:100%;
+
 }
+
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    width: 100%;
+    display:flex;
 
-    font-family: "Lefty", sans-serif;
-    font-size: 1.3rem;
 
-    text-decoration: none;
-    text-align: center;
-    color: white;
+    justify-content:center;
 
-    background: #29412B;
 
-    padding: 18px 20px;
+    align-items:center;
 
-    border: none;
-    border-radius: 6px;
 
-    transition: background .2s ease, transform .2s ease;
+    width:100%;
+
+
+    font-family:"Lefty", sans-serif;
+
+
+    font-size:1.3rem;
+
+
+    text-decoration:none;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    background:#29412B;
+
+
+    padding:18px 20px;
+
+
+    border:none;
+
+
+    border-radius:6px;
+
+
+    transition:background .2s ease, transform .2s ease;
+
 }
 
-.button:hover{
+
+.button:hover {
 
     background:#35553A;
 
+
     transform:translateY(-2px);
+
 }
+
 
 /* ---------- Footer ---------- */
 
-footer{
+footer {
 
     position:absolute;
 
+
     bottom:28px;
+
 
     z-index:2;
 
+
     font-family:"Poppin", sans-serif;
+
 
     font-size:.9rem;
 
+
     letter-spacing:1px;
+
 }
+
 
 /* ---------- Mobile ---------- */
 
 @media(max-width:600px){
 
-    h1{
+    h1 {
+
         font-size:2.7rem;
+
     }
 
-    .button{
+
+    .button {
+
         font-size:1.15rem;
+
         padding:16px;
+
     }
 
-}
-
-.bg-image {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100dvh;
-
-    object-fit: cover;
-    object-position: center;
-
-    z-index: -2;
 }
