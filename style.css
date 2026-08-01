@@ -14,9 +14,12 @@
 /* ---------- Reset ---------- */
 
 * {
+
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 
@@ -31,7 +34,8 @@ body {
 
     overflow: hidden;
 
-    background: #000;
+    background: transparent;
+
 }
 
 
@@ -39,7 +43,16 @@ body {
 
 body {
 
-    position: relative;
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    height: 100dvh;
+
 
     display: flex;
 
@@ -47,9 +60,14 @@ body {
 
     align-items: center;
 
-    flex-direction: column;
+
+    padding-top: env(safe-area-inset-top);
+
+    padding-bottom: env(safe-area-inset-bottom);
+
 
     color: white;
+
 }
 
 
@@ -59,16 +77,16 @@ body {
 
     position: fixed;
 
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
 
-    width: 100%;
-    height: 100%;
 
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
 
-    transform: translate(-50%, -50%);
+    height: 100vh;
+
+    height: 100dvh;
+
 
     background-image: url("assets/images/background.jpg");
 
@@ -78,7 +96,9 @@ body {
 
     background-repeat: no-repeat;
 
-    z-index: 0;
+
+    z-index: -2;
+
 }
 
 
@@ -90,11 +110,15 @@ body {
 
     inset: 0;
 
+
     background: rgba(0,0,0,.35);
+
 
     backdrop-filter: blur(2px);
 
-    z-index: 1;
+
+    z-index: -1;
+
 }
 
 
@@ -106,11 +130,12 @@ main {
 
     z-index: 2;
 
+
     width: min(420px, 90%);
 
-    margin: 0 auto;
 
     text-align: center;
+
 }
 
 
@@ -124,9 +149,12 @@ h1 {
 
     font-weight: normal;
 
+
     margin-bottom: 50px;
 
+
     letter-spacing: 1px;
+
 }
 
 
@@ -138,10 +166,14 @@ h1 {
 
     flex-direction: column;
 
+
     gap: 16px;
 
+
     width: 100%;
+
 }
+
 
 
 .button {
@@ -152,33 +184,32 @@ h1 {
 
     align-items: center;
 
+
     width: 100%;
+
 
     font-family: "Lefty", sans-serif;
 
+
     font-size: 1.3rem;
+
 
     text-decoration: none;
 
     text-align: center;
 
+
     color: white;
+
 
     background: #29412B;
 
+
     padding: 18px 20px;
+
 
     border-radius: 6px;
 
-    transition: background .2s ease, transform .2s ease;
-}
-
-
-.button:hover {
-
-    background: #35553A;
-
-    transform: translateY(-2px);
 }
 
 
@@ -188,21 +219,30 @@ footer {
 
     position: fixed;
 
-    bottom: 24px;
+
+    bottom: calc(24px + env(safe-area-inset-bottom));
+
 
     left: 0;
 
+
     width: 100%;
+
 
     z-index: 2;
 
+
     text-align: center;
+
 
     font-family: "Poppin", sans-serif;
 
+
     font-size: .9rem;
 
+
     letter-spacing: 1px;
+
 }
 
 
@@ -210,13 +250,20 @@ footer {
 
 @media(max-width:600px){
 
+
     h1 {
+
         font-size: 2.7rem;
+
     }
 
+
     .button {
+
         font-size: 1.15rem;
+
         padding: 16px;
+
     }
 
 }
