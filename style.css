@@ -10,78 +10,50 @@
     src: url("assets/fonts/Lefty.otf") format("opentype");
 }
 
-
 /* ---------- Reset ---------- */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    height: 100%;
+    min-height: -webkit-fill-available;
 }
 
 html,
 body {
+    margin: 0;
+    padding:0;
     width: 100%;
     height: 100%;
-
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
-
-    background: #000;
 }
 
-
-/* ---------- Full Screen Layout ---------- */
-
 body {
-
-    position: relative;
-
-    width: 100vw;
-    height: 100dvh;
-
+    min-height: 100vh;
     min-height: 100dvh;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    overflow-x: hidden;
+
+    position: relative;
 
     color: white;
 }
 
-
-/* ---------- Background ---------- */
-
-.bg-image {
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100dvh;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    z-index: -2;
-}
-
+/* ---------- Background Overlay ---------- */
 
 .overlay {
 
     position: fixed;
 
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100dvh;
+    inset: 0;
 
     background: rgba(0,0,0,.35);
 
@@ -90,22 +62,23 @@ body {
     z-index: -1;
 }
 
-
 /* ---------- Main ---------- */
 
 main {
+    position: relative;
+
+    z-index: 2;
 
     width: min(420px, 90%);
 
+    margin: 0 auto;
+
     text-align: center;
-
 }
-
 
 /* ---------- Title ---------- */
 
 h1 {
-
     font-family: "Poppin", sans-serif;
 
     font-size: 3.4rem;
@@ -117,11 +90,9 @@ h1 {
     letter-spacing: 1px;
 }
 
-
 /* ---------- Buttons ---------- */
 
 .buttons {
-
     display: flex;
 
     flex-direction: column;
@@ -131,73 +102,80 @@ h1 {
     width: 100%;
 }
 
-
 .button {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     width: 100%;
 
     font-family: "Lefty", sans-serif;
-
     font-size: 1.3rem;
 
     text-decoration: none;
-
+    text-align: center;
     color: white;
 
     background: #29412B;
 
     padding: 18px 20px;
 
+    border: none;
     border-radius: 6px;
 
+    transition: background .2s ease, transform .2s ease;
 }
 
+.button:hover{
 
-.button:hover {
+    background:#35553A;
 
-    background: #35553A;
-
+    transform:translateY(-2px);
 }
-
 
 /* ---------- Footer ---------- */
 
-footer {
+footer{
 
-    position: fixed;
+    position:absolute;
 
-    bottom: 24px;
+    bottom:28px;
 
-    left: 0;
+    z-index:2;
 
-    width: 100%;
+    font-family:"Poppin", sans-serif;
 
-    text-align: center;
+    font-size:.9rem;
 
-    font-family: "Poppin", sans-serif;
-
-    font-size: .9rem;
-
+    letter-spacing:1px;
 }
-
 
 /* ---------- Mobile ---------- */
 
 @media(max-width:600px){
 
-    h1 {
-        font-size: 2.7rem;
+    h1{
+        font-size:2.7rem;
     }
 
-    .button {
-        font-size: 1.15rem;
-        padding: 16px;
+    .button{
+        font-size:1.15rem;
+        padding:16px;
     }
 
+}
+
+.bg-image {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -2;
 }
