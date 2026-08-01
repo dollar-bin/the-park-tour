@@ -1,3 +1,5 @@
+/* ---------- Fonts ---------- */
+
 @font-face {
     font-family: "Poppin";
     src: url("assets/fonts/Poppin-Regular.otf") format("opentype");
@@ -8,6 +10,8 @@
     src: url("assets/fonts/Lefty.otf") format("opentype");
 }
 
+
+/* ---------- Reset ---------- */
 
 * {
     margin: 0;
@@ -22,50 +26,41 @@ body {
     width: 100%;
     height: 100%;
 
+    margin: 0;
+    padding: 0;
+
     overflow: hidden;
 
-    background: #000;
+    background: transparent;
 
 }
 
 
-body {
+/* ---------- Full Bleed Background ---------- */
 
-    position: relative;
+body::before {
 
-    color: white;
+    content: "";
 
-}
+    position: fixed;
 
+    top: -50px;
+    left: -50px;
 
-/* ---------- TRUE FULL BLEED BACKGROUND ---------- */
-
-.background {
-
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-
-    width: 200vw;
-
-    height: 200vh;
-
-
-    transform: translate(-50%, -50%);
+    width: calc(100vw + 100px);
+    height: calc(100vh + 100px);
 
 
     background-image: url("assets/images/background.jpg");
 
-    background-repeat: no-repeat;
-
-    background-position: center;
-
     background-size: cover;
 
+    background-position: center center;
 
-    z-index: 0;
+    background-repeat: no-repeat;
+
+
+    z-index: -2;
 
 }
 
@@ -75,21 +70,25 @@ body {
 
 .overlay {
 
-    position: absolute;
+    position: fixed;
 
-    inset: 0;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
 
 
     background: rgba(0,0,0,.35);
 
 
-    z-index: 1;
+    z-index: -1;
 
 }
 
 
 
-/* ---------- Content ---------- */
+/* ---------- Main ---------- */
 
 main {
 
@@ -115,6 +114,8 @@ main {
 
 
 
+/* ---------- Title ---------- */
+
 h1 {
 
     font-family: "Poppin", sans-serif;
@@ -123,11 +124,17 @@ h1 {
 
     font-weight: normal;
 
+
     margin-bottom: 50px;
+
+
+    letter-spacing: 1px;
 
 }
 
 
+
+/* ---------- Buttons ---------- */
 
 .buttons {
 
@@ -158,9 +165,12 @@ h1 {
     font-size: 1.3rem;
 
 
-    color: white;
-
     text-decoration: none;
+
+    text-align: center;
+
+
+    color: white;
 
 
     background: #29412B;
@@ -174,6 +184,8 @@ h1 {
 }
 
 
+
+/* ---------- Footer ---------- */
 
 footer {
 
@@ -196,18 +208,19 @@ footer {
 
     font-family: "Poppin", sans-serif;
 
+
     font-size: .9rem;
 
 }
 
 
 
+/* ---------- Mobile ---------- */
+
 @media(max-width:600px){
 
     h1 {
-
         font-size: 2.7rem;
-
     }
 
 
