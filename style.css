@@ -13,86 +13,92 @@
 
 /* ---------- Reset ---------- */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
 html,
 body {
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    background:#000;
-
-}
-
-
-/* ---------- Background Image ---------- */
-
-.bg-image {
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100vw;
-    height:100vh;
-
-    background-image:url("assets/images/background.jpg");
-
-    background-size:cover;
-
-    background-position:center center;
-
-    background-repeat:no-repeat;
-
-    z-index:0;
+    background: transparent;
 
 }
 
-
-/* ---------- Background Overlay ---------- */
-
-.overlay {
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.35);
-
-    backdrop-filter:blur(2px);
-
-    z-index:1;
-
-}
-
-
-/* ---------- Body ---------- */
 
 body {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    position:relative;
+    position: relative;
 
-    color:white;
+    color: white;
+
+}
+
+
+/* ---------- Background ---------- */
+
+.bg-image {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+
+    background-image: url("assets/images/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+
+    z-index: 0;
+
+}
+
+
+/* ---------- Overlay ---------- */
+
+.overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+
+    background: rgba(0,0,0,.35);
+
+    backdrop-filter: blur(2px);
+
+
+    z-index: 1;
 
 }
 
@@ -101,15 +107,18 @@ body {
 
 main {
 
-    position:relative;
+    position: relative;
 
-    z-index:2;
+    z-index: 2;
 
-    width:min(420px,90%);
 
-    margin:0 auto;
+    width: min(420px, 90%);
 
-    text-align:center;
+
+    margin: 0 auto;
+
+
+    text-align: center;
 
 }
 
@@ -118,15 +127,17 @@ main {
 
 h1 {
 
-    font-family:"Poppin", sans-serif;
+    font-family: "Poppin", sans-serif;
 
-    font-size:3.4rem;
+    font-size: 3.4rem;
 
-    font-weight:normal;
+    font-weight: normal;
 
-    margin-bottom:50px;
 
-    letter-spacing:1px;
+    margin-bottom: 50px;
+
+
+    letter-spacing: 1px;
 
 }
 
@@ -135,55 +146,66 @@ h1 {
 
 .buttons {
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    gap:16px;
 
-    width:100%;
+    gap: 16px;
+
+
+    width: 100%;
 
 }
 
 
 .button {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    width:100%;
 
-    font-family:"Lefty", sans-serif;
+    width: 100%;
 
-    font-size:1.3rem;
 
-    text-decoration:none;
+    font-family: "Lefty", sans-serif;
 
-    text-align:center;
+    font-size: 1.3rem;
 
-    color:white;
 
-    background:#29412B;
+    text-decoration: none;
 
-    padding:18px 20px;
+    text-align: center;
 
-    border:none;
 
-    border-radius:6px;
+    color: white;
 
-    transition:background .2s ease, transform .2s ease;
+
+    background: #29412B;
+
+
+    padding: 18px 20px;
+
+
+    border: none;
+
+
+    border-radius: 6px;
+
+
+    transition: background .2s ease, transform .2s ease;
 
 }
 
 
 .button:hover {
 
-    background:#35553A;
+    background: #35553A;
 
-    transform:translateY(-2px);
+    transform: translateY(-2px);
 
 }
 
@@ -192,23 +214,31 @@ h1 {
 
 footer {
 
-    position:absolute;
+    position: absolute;
 
-    bottom:28px;
 
-    left:0;
+    bottom: 28px;
 
-    width:100%;
 
-    z-index:2;
+    left: 0;
 
-    text-align:center;
 
-    font-family:"Poppin", sans-serif;
+    width: 100%;
 
-    font-size:.9rem;
 
-    letter-spacing:1px;
+    z-index: 2;
+
+
+    text-align: center;
+
+
+    font-family: "Poppin", sans-serif;
+
+
+    font-size: .9rem;
+
+
+    letter-spacing: 1px;
 
 }
 
@@ -219,16 +249,16 @@ footer {
 
     h1 {
 
-        font-size:2.7rem;
+        font-size: 2.7rem;
 
     }
 
 
     .button {
 
-        font-size:1.15rem;
+        font-size: 1.15rem;
 
-        padding:16px;
+        padding: 16px;
 
     }
 
